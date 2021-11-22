@@ -1,0 +1,44 @@
+ <script>
+export default {
+  name: 'UsersIndex',
+  data() {
+    return {
+      users: [{
+        id: 1,
+        name: "Leanne Graham",
+        username: "Bret",
+        email: "Sincere@april.biz",
+        phone: "1-770-736-8031 x56442",
+        website: "hildegard.org",
+      }],
+
+      usersFields: [
+      {
+        key: 'id',
+        label: 'Cod.',
+      },
+      {
+        key: 'name',
+        label: 'Nome',
+      },
+      {
+        key: 'username',
+        label: 'Nome de Usuário',
+      },
+      {
+        key: 'email',
+        label: 'Email',
+      },
+      {
+        key: 'website',
+        label: 'Site',
+      },
+      {
+        key: 'actions',
+        label: 'Ações',
+      },
+    ]
+    }
+  }
+}
+</script>
