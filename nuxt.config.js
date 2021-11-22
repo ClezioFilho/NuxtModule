@@ -41,7 +41,6 @@ export default {
   modules: [
     ['bootstrap-vue/nuxt'],
     ['@nuxtjs/axios'],
-    // ['~/counter', { namespace: 'counter' }],
     // ['~/product', { namespace: 'product' }],
     ['~/users', { namespace: 'users' }],
     ['~/todos', { namespace: 'todos' }]
@@ -49,7 +48,6 @@ export default {
 
   usersModule: { message: 'Modulo Usuário'},
   todosModule: { message: 'Modulo Todo'},
-  customCounter: { initialValue: 6, debug: true },
 
   // router: {
   //   middleware: ['counter']
