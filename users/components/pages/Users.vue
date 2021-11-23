@@ -44,7 +44,11 @@
         @remove="remove"
       />
 
-      {{ options }}
+      <b-row class="py-2" align-h="between">
+        <b-col>
+          <h2>Mensagem nuxt.config: {{ options.message }}</h2>
+        </b-col>
+      </b-row>
     </template>
   </b-container>
 </template>

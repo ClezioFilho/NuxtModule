@@ -49,9 +49,10 @@ export default {
   usersModule: { message: 'Modulo Usuário'},
   todosModule: { message: 'Modulo Todo'},
 
-  // router: {
-  //   middleware: ['counter']
-  // },
+  router: {
+    mode: 'hash',
+    // middleware: ['counter']
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
