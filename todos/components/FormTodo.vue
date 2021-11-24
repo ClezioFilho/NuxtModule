@@ -1,18 +1,25 @@
 <template>
   <div>
     <b-form @submit.prevent="onSubmit">
-      <b-form-group label="Nome:">
+      <b-form-group label="Título:">
         <b-form-input
-          :value="$store.state.todos.todo.name"
-          @input="event => $store.commit('todos/UPDATE_NAME', event)"
+          :value="$store.state.todos.todo.title"
+          @input="event => $store.commit('todos/UPDATE_TITLE', event)"
           type="text"/>
       </b-form-group>
 
-      <b-form-group label="Email:">
+      <b-form-group label="Usuário:">
         <b-form-input
-          :value="$store.state.todos.todo.email"
-          @input="event => $store.commit('todos/UPDATE_EMAIL', event)"
+          :value="$store.state.todos.todo.userId"
+          @input="event => $store.commit('todos/UPDATE_USER', event)"
           type="text"/>
+      </b-form-group>
+
+      <b-form-group label="Completo:">
+        <b-form-checkbox
+          v-model="completed"
+          switch
+        />
       </b-form-group>
 
       <div class="d-flex justify-content-center">
@@ -40,5 +47,16 @@ export default {
       this.saveTodo()
     },
   },
+
+  computed: {
+    completed: {
+      get () {
+        return this.$store.state.todos.todo.completed
+      },
+      set (value) {
+        this.$store.commit('todos/UPDATE_COMPLETED', value)
+      }
+    }
+  }
 }
 </script>

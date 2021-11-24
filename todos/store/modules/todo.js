@@ -6,7 +6,12 @@ export default options => ({
     options,
     todos: [],
 
-    todo: {},
+    todo: {
+      id: null,
+      title: null,
+      userId: null,
+      completed: false,
+    },
 
     todosFields: [
       {
@@ -97,12 +102,16 @@ export default options => ({
       }
     },
   
-    UPDATE_NAME(state, data) {
-      state.todo.name = data
+    UPDATE_TITLE(state, data) {
+      state.todo.title = data
     },
   
-    UPDATE_EMAIL(state, data) {
-      state.todo.email = data
+    UPDATE_USER(state, data) {
+      state.todo.userId = data
+    },
+
+    UPDATE_COMPLETED(state, data) {
+      state.todo.completed = data
     }
   },
 
